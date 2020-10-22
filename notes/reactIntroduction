@@ -1,0 +1,36 @@
+var myTitle = React.createClass({
+	render(){
+		return (
+			div(null,
+				h1(null, 'This is the first component')
+			)
+		)
+	}
+})
+
+-- This is the class 
+
+var myFirstComponent = (
+  div({style:{color:'red'}},
+    React.createElement(myTitle, null),
+    React.createElement(myTitle, null),
+    React.createElement(myTitle, null)
+  )
+)
+
+
+-- This is creating of instance of that class, where three different elements are created with the help of React.createElement
+
+
+var React = require('react')
+// if you do not put the './' here, it means that I have an NPM module that is installed, that will pull it from the package.json file
+
+
+Babel
+
+- takes future looking js to current js
+- .babelrc
+	- json objects
+	- presets: ["react","es2015"] // includes everything we need to do react transformation and including everything we need to do es2015 transformation
+	- single quotes are not valid in json
+	- --module-bind 'js=babel' ::: anytime you run into a js file just run it through babel
